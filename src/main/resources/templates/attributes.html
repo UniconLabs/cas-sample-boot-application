@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+    <table>
+        <tr>
+            <td>principal</td>
+            <td th:text="${principal.name}">principal</td>
+        </tr>
+        <tr th:each="attribute : ${principal.attributes}">
+            <td th:text="${attribute.key}">key</td>
+            <td th:text="${attribute.value}">value</td>
+        </tr>
+    </table>
+</body>
+</html>

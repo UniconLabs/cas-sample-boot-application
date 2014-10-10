@@ -1,0 +1,37 @@
+buildscript {
+    ext {
+        springBootVersion = project."spring-boot.version"
+    }
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'spring-boot'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy"
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+
+    compile "org.jasig.cas.client:cas-client-core:3.3.3"
+    compile "org.opensaml:opensaml:2.6.1"
+    compile "xml-apis:xml-apis:1.4.01"
+}
+
+bootRun {
+    if (project.hasProperty('args')) {
+        args project.args.split('\\s+')
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
