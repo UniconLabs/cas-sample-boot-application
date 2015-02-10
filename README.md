@@ -4,7 +4,7 @@
 
 ```shell
 ./gradlew clean build
-java -jar java -jar build/libs/cas-test-1.0-SNAPSHOT.jar --local.serverName=http://localhost:8888 --cas.serverUrlPrefix=https://test.scaldingspoon.org/cas
+java -jar build/libs/cas-test-1.0-SNAPSHOT.jar --local.serverName=http://localhost:8888 --cas.serverUrlPrefix=https://test.scaldingspoon.org/cas
 ```
 
 Make sure to use the correct host names for your environment
