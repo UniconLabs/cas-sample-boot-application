@@ -3,4 +3,7 @@ server:
 local:
   serverName: http://localhost:8888
 cas:
-  serverUrlPrefix: https://test.scaldingspoon.org/cas
+  serverUrlPrefix: https://localhost:8443/cas
+spring:
+  profiles:
+    active: saml
